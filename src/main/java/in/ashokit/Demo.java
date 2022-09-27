@@ -2,7 +2,11 @@ package in.ashokit;
 
 
 public class Demo extends RuntimeException {
+
 private Map<String,Object> cache=new HashMap;
+
+private static final String ="Hi";
+
 
 
 	
@@ -12,7 +16,11 @@ private Map<String,Object> cache=new HashMap;
 public void shamu(){
 }
 
+
 public void loadData(){
+
+public void ramu(){
+
 }
 
 
