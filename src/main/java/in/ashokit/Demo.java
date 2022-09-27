@@ -8,6 +8,8 @@ public class Demo extends RuntimeException {
 	public void m1() {
 		//logic
 	}
+public void shamu(){
+}
 
 public void ramu(){
 }
