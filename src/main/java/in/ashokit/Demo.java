@@ -9,5 +9,8 @@ public class Demo extends RuntimeException {
 		//logic
 	}
 
+public void ramu(){
+}
+
 
 }
