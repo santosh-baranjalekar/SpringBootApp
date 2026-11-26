@@ -1,0 +1,19 @@
+name: Enforce Single Commit per PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check commit count
+        env:
+          COMMITS: ${{ github.event.pull_request.commits }}
+        run: |
+          echo "Total commits in PR: $COMMITS"
+          if [ "$COMMITS" -ne 1 ]; then
+            echo "::error::Pull requests must contain exactly 1 commit (found $COMMITS). Please squash your commits and force-push."
+            exit 1
+          fi
